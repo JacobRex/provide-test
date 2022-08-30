@@ -9,7 +9,6 @@ export default class AlertApiProvider extends Vue {
     close: this.closeAlert,
     component: undefined,
     data: undefined,
-    isChild: false
   } as AlertApi
 
   openAlert(component: VueComponent, data: Data) {

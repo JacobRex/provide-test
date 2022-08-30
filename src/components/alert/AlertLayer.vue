@@ -3,8 +3,6 @@
     v-if="alertLayer.component"
     :component="alertLayer.component"
     :data="alertLayer.data"
-    :mode="mode"
-    :valign="valign"
   >
   </Layer>
 </template>
@@ -21,8 +19,5 @@ import type { AlertApi } from '@/components/alert/models';
 })
 export default class alertLayer extends Vue {
   @Inject() alertLayer!: AlertApi;
-
-  mode = this.alertLayer?.isChild ? 'child' : 'standalone';
-  valign = this.alertLayer?.isChild ? 'top' : 'center';
 };
 </script>

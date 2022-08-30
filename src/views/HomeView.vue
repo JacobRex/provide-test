@@ -1,10 +1,11 @@
 <template>
   <div>
-    Open a Modal or Alert by clicking one of the buttons below. When you attempt to close the modal, an alert will be shown inside the modal's portal to confirm that you want to close it.
+    Open a Modal or Alert by clicking one of the buttons below. When you attempt to close the modal with the X or cancel button, an alert will be shown inside the modal's portal to confirm that you want to close it.
     <br><br>
     <Button @click="openModal">
       Open Modal
     </Button>
+    &nbsp;
     <Button
       @click="openAlert"
       variant="outline"

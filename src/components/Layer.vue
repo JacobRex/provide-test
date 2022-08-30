@@ -8,11 +8,7 @@
   >
     <div
       v-if="component"
-      :class="[
-        'layer',
-        `mode-${mode}`,
-        `valign-${valign}`,
-      ]"
+      class="layer"
     >
       <component
         class="layer__component"
@@ -61,33 +57,15 @@ export default class Layer extends Vue {
 
 <style scoped>
 .layer {
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
-}
-
-/* Modes
--------------------------- */
-.mode-standalone {
-  position: fixed;
-}
-
-.mode-child {
-  position: absolute;
-}
-
-/* Valign
--------------------------- */
-.valign-center {
-  align-items: center;
-}
-
-.valign-top {
-  align-items: top;
 }
 
 /* Fade Transition
@@ -104,11 +82,7 @@ export default class Layer extends Vue {
   opacity: 0;
 }
 
-.valign-center .transparent .layer__component {
+.transparent .layer__component {
   transform: translateY(10px);
-}
-
-.valign-top .transparent .layer__component {
-  transform: translateY(-10px);
 }
 </style>
