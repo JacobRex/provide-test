@@ -1,22 +1,28 @@
 <template>
   <Layout id="app">
-    <router-view />
+    <ci-dashboard>
+      <router-view />
+    </ci-dashboard>
   </Layout>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import Layout from '@/components/Layout.vue';
+import { CiDashboard } from '@ci/stratus-components';
 
 @Component({
   components: {
-    Layout
+    Layout,
+    CiDashboard
   }
 })
 export default class App extends Vue {};
 </script>
 
-<style>
+<style lang="css">
+@import '../node_modules/@ci/stratus-components/build/main.css';
+
 #app {
   font-family: Arial, Helvetica, sans-serif;
 }
